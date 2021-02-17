@@ -8,8 +8,8 @@
     {% if pins  and pins is not null %}
         {% for pin in pins %}
             <article>
-                <h1>{{ pin.title }}</h1>
-               <p> {{ pin.description }}</p>
+                <h1><a href="{{ path('app_pins_show, {id: pind.id}') }}">{{ pin.title }}</a></h1>
+               <p><a href="#">{{ pin.description }}</a></p>
             </article>
         {% endfor %}
     {% endif %}
