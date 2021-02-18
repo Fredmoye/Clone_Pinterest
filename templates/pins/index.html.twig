@@ -4,13 +4,10 @@
 
 {% block body %}
     <h1>{{ pluralize(pins|length, 'Pin') }}</h1>
-
-    {% if pins  and pins is not null %}
         {% for pin in pins %}
             <article>
-                <h1><a href="{{ path('app_pins_show, {id: pind.id}') }}">{{ pin.title }}</a></h1>
-               <p><a href="#">{{ pin.description }}</a></p>
+                <h1><a href="{{ path('app_pins_show', {id: pin.id}) }}">{{ pin.title }}</a></h1>
+               <p>{{ pin.description }}</p>
             </article>
         {% endfor %}
-    {% endif %}
 {% endblock %}

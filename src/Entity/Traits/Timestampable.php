@@ -5,12 +5,12 @@ namespace App\Entity\Traits;
 Trait Timestampable
 {
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", options={"default":"CURRENT_TIMESTAMPABLE"})
      */
     private $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", options={"default":"CURRENT_TIMESTAMPABLE"})
      */
     private $updatedAt;
 
